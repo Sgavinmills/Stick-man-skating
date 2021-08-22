@@ -1,0 +1,238 @@
+.background-container {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  
+}
+
+.road-line {
+    position: absolute;
+    height: 0;
+    width: 100vw;
+    border: 1px solid grey;
+    top: 50%;
+}
+
+.house-one {
+    position: absolute;
+    height: 26%;
+    width: 8%;
+    border: 2px solid lightgrey;
+    bottom: 50%;
+    left: 150%;
+ 
+
+}
+
+
+@keyframes scroll-left--house-one {
+    100%{
+        left: -100%;
+    }
+}
+
+.house-two {
+    position: absolute;
+    height: 16%;
+    width: 25%;
+    border: 2px solid lightgrey;
+    bottom: 50%;
+    left: 200%;
+ 
+
+}
+
+.house-two--animation {
+    animation-name: scroll-left--house-two;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.house-one--animation {
+    animation-name: scroll-left--house-one;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes scroll-left--house-two {
+    100%{
+        left: -50%;
+    }
+}
+
+
+.house-one-window-one {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid lightgrey;
+    top: 8%;
+    left: 10%;
+}
+
+.house-one-window-two {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid lightgrey;
+    top: 8%;
+    left: 70%;
+}
+
+.house-one-window-three {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid lightgrey;
+    top: 58%;
+    left: 70%;
+}
+
+.house-one-door {
+    position: absolute;
+    width: 22%;
+    height: 42%;
+    border: 2px solid lightgrey;
+    bottom: 0;
+    left: 10%;
+}
+
+.house-two-window-one {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: 2px solid lightgrey;
+    top: 10%;
+    left: 10%;
+}
+.house-two-window-two {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: 2px solid lightgrey;
+    top: 10%;
+    left: 20%;
+}
+.house-two-window-three {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: 2px solid lightgrey;
+    top: 10%;
+    left: 30%;
+}
+.house-two-window-four {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: 2px solid lightgrey;
+    top: 10%;
+    left: 40%;
+}
+.house-two-window-five {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: 2px solid lightgrey;
+    top: 10%;
+    left: 50%;
+}
+.house-two-window-six {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: 2px solid lightgrey;
+    top: 10%;
+    left: 60%;
+}
+.house-two-window-seven {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: 2px solid lightgrey;
+    top: 10%;
+    left: 70%;
+}
+.house-two-window-eight {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: 2px solid lightgrey;
+    top: 10%;
+    left: 80%;
+}
+
+.house-two-window-nine {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: 2px solid lightgrey;
+    top: 35%;
+    left: 10%;
+}
+.house-two-window-ten {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: 2px solid lightgrey;
+    top: 35%;
+    left: 20%;
+}
+.house-two-window-eleven {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: 2px solid lightgrey;
+    top: 35%;
+    left: 30%;
+}
+.house-two-window-twelve {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: 2px solid lightgrey;
+    top: 35%;
+    left: 40%;
+}
+.house-two-window-thirteen {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: 2px solid lightgrey;
+    top: 35%;
+    left: 50%;
+}
+.house-two-window-fourteen {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: 2px solid lightgrey;
+    top: 35%;
+    left: 60%;
+}
+.house-two-window-fifteen {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: 2px solid lightgrey;
+    top: 35%;
+    left: 70%;
+}
+.house-two-window-sixteen {
+    position: absolute;
+    width: 5%;
+    height: 10%;
+    border: 2px solid lightgrey;
+    top: 35%;
+    left: 80%;
+}
+
+.house-two-door {
+    position: absolute;
+    width: 25%;
+    height: 20%;
+    border: 2px solid lightgrey;
+    bottom: 0;
+    left: 10%;
+}

@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import Background from './Components/Background';
 import './App.css';
+import Skater from './Components/Skater';
+import { useState } from "react";
+
+
 
 function App() {
+
+  const [theSkater, setTheSkater] = useState({
+    isSkatingNormally: false,
+    inManual: false,
+    inNoseManual: false,
+    isTrickReady: false,
+    isCrashed: false,
+    isStationary: true,
+    isInAir: false,
+    isLeftWheelDown: false,
+    isRightWheelDown: false,
+    mostRecentManual : 'none', //using this to determine which transform origin style is applied to the stickman container
+    lastTrickTime : { ollie : 0 }
+  })
+
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Background theSkater={theSkater}/>
+      <Skater theSkater={theSkater} setTheSkater={setTheSkater}/>
     </div>
   );
 }
