@@ -3,7 +3,7 @@ import styles from './Components-CSS/Skater.module.css';
 
 //not sure if this one needs to be a state ornot, is it OK here??
 const tempTimingKeys = [];
-export default function Skater({ theSkater, setTheSkater }) {
+export default function Skater({ theSkater, setTheSkater, setCrashMessage }) {
 
     const wheelKeys = ['s', 'f'] //s is left wheel,f is right. Can add more for right hand later.
     const leftWheels = ['s'];
@@ -45,7 +45,7 @@ export default function Skater({ theSkater, setTheSkater }) {
                 const currentTime = new Date();
                 console.log('Attempted to land this long after take off:')
                 console.log(currentTime - theSkater.lastTrickTime.ollie);
-                if (currentTime - theSkater.lastTrickTime.ollie < 530) {
+                if (currentTime - theSkater.lastTrickTime.ollie < 520) {
                     setCrashed('CRASH message: landed ollie to early');
                 } else { //****here buggy? */
                                //if in earlytime window then if only one key pressed do nothing
@@ -59,7 +59,7 @@ export default function Skater({ theSkater, setTheSkater }) {
                     //if in the late time window 
                     //if there is already a key in array then land normally - clear array
                     //if no keys in there then land in manual like a boss - clear array
-                    if(currentTime - theSkater.lastTrickTime.ollie < 800) {
+                    if(currentTime - theSkater.lastTrickTime.ollie < 875) {
                         if(tempTimingKeys.includes(event.key)){
                             tempTimingKeys.length = 0;
                             setCrashed('Double tapped the manual landing - onlypress each key once when landing');
@@ -211,6 +211,7 @@ export default function Skater({ theSkater, setTheSkater }) {
             newSkater.isCrashed = true;
             newSkater.isStationary = true;
             if(crashMsg) {
+                setCrashMessage(crashMsg);
                 console.log(crashMsg);
             }
             return newSkater;
@@ -284,10 +285,10 @@ export default function Skater({ theSkater, setTheSkater }) {
                 console.log(inAirRef.current);
                 if (inAirRef.current) {
                     if(tempTimingKeys.length > 0) {
-                        setCrashed('CRASH message: Tried to manual to early.');
+                         setCrashed('CRASH message: Tried to manual to early - manuals require more precise timing than normal land');
                         tempTimingKeys.length = 0;
                     }
-                    else setCrashed('CRASH message: Didnt land after 1second');
+                    else setCrashed('CRASH message: Didnt land after 1second - make sure use wheel keys to land');
                 }
 
             }, 1000)
