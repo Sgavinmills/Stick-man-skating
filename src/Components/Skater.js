@@ -47,7 +47,7 @@ export default function Skater({ theSkater, setTheSkater, setCrashMessage }) {
                 console.log(currentTime - theSkater.lastTrickTime.ollie);
                 if (currentTime - theSkater.lastTrickTime.ollie < 520) {
                     setCrashed('CRASH message: landed ollie to early');
-                } else { //****here buggy? */
+                } else { 
                                //if in earlytime window then if only one key pressed do nothing
                     //if both keys pressed then land successfully
 

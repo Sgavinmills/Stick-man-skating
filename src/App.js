@@ -1,6 +1,8 @@
 import Background from './Components/Background';
 import './App.css';
 import Skater from './Components/Skater';
+import CrashMessage from './Components/CrashMessage';
+
 import { useState } from "react";
 
 
@@ -21,12 +23,13 @@ function App() {
     lastTrickTime : { ollie : 0 }
   })
 
-  
+  const [crashMessage, setCrashMessage] = useState('example crash message');
 
   return (
     <div className="App">
+      <CrashMessage crashMessage={crashMessage} />
       <Background theSkater={theSkater}/>
-      <Skater theSkater={theSkater} setTheSkater={setTheSkater}/>
+      <Skater theSkater={theSkater} setTheSkater={setTheSkater} setCrashMessage={setCrashMessage}/>
     </div>
   );
 }
